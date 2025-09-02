@@ -39,19 +39,19 @@ function ProjectCards() {
     {
       title: '🏆 MeetingMoney',
       description: 'Calculate and display the real-time cost of your meetings. Highest viral potential with shocking cost counters.',
-      link: '/docs/project-ideas/02-meeting-money',
+      link: '/docs/project-ideas/meeting-money',
       badges: ['Easy Build', 'Viral', 'B2B/B2C']
     },
     {
       title: '💼 AI Cold Email Personalizer',
       description: 'Generate hyper-personalized cold emails that get 10x response rates. Perfect for B2B sales teams.',
-      link: '/docs/project-ideas/01-ai-cold-email',
+      link: '/docs/project-ideas/ai-cold-email',
       badges: ['High Revenue', 'B2B', 'Fast Sales']
     },
     {
       title: '🌱 EcoScore Calculator',
       description: 'Gamified carbon footprint tracker. Guaranteed environmental prize winner with viral social sharing.',
-      link: '/docs/project-ideas/03-ecoscore-calculator',
+      link: '/docs/project-ideas/ecoscore-calculator',
       badges: ['Environmental', 'Social', 'Mobile']
     }
   ];
