@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ottawa-hackathon.local',
+  url: 'https://crarau.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hackathon-ideas/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ottawa-hackathon', // Usually your GitHub org/user name.
-  projectName: 'ideas', // Usually your repo name.
+  organizationName: 'crarau', // Usually your GitHub org/user name.
+  projectName: 'hackathon-ideas', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
