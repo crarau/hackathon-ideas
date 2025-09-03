@@ -138,12 +138,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-preview.jpg',
     navbar: {
       title: 'Hackathon Ideas',
       logo: {
-        alt: 'Ottawa Hackathon',
-        src: 'img/logo.svg',
+        alt: 'Ottawa Hackathon 3.0',
+        src: 'img/hackathon-logo.png',
       },
       items: [
         {
