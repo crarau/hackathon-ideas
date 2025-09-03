@@ -1,6 +1,6 @@
 # 🚀 Ottawa Hackathon 3.0 Ideas Vault
 
-![Hackathon Ideas Homepage](./static/img/docusaurus-social-card.jpg)
+![Hackathon Ideas Homepage](./static/img/website-preview.jpg)
 
 ## 🔥 What's This All About?
 
