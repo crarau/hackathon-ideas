@@ -88,7 +88,7 @@ const config: Config = {
         {to: '/docs/evaluation', label: 'Evaluation', position: 'left'},
         {to: '/docs/prizes', label: 'Prizes', position: 'left'},
         {
-          href: 'https://github.com/ottawa-hackathon',
+          href: 'https://github.com/crarau/hackathon-ideas',
           label: 'GitHub',
           position: 'right',
         },
@@ -98,28 +98,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Hackathon',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Project Ideas',
               to: '/docs/intro',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Register on Luma',
+              href: 'https://luma.com/9k96tg5z?tk=EqpUKv',
             },
           ],
         },
@@ -127,12 +114,12 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Ciprian Rarau Blog',
+              href: 'https://www.ciprianrarau.com/blog',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/crarau/hackathon-ideas',
             },
           ],
         },

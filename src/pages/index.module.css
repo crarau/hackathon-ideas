@@ -1,23 +1,620 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800;900&display=swap');
 
-.heroBanner {
+.hackathonBanner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5); }
+  50% { box-shadow: 0 4px 30px rgba(118, 75, 162, 0.8); }
+}
+
+.hackathonContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.lumaEmbed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bannerTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
+}
+
+.bannerSubtitle {
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  font-weight: 600;
+}
+
+.registerButton {
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.registerButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+  color: white;
+  text-decoration: none;
+}
+
+.criteriaSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.criteriaSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.05) 10px,
+    rgba(255,255,255,0.05) 20px
+  );
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.criteriaHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.criteriaTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.5rem;
+  color: white;
+  margin: 0;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  letter-spacing: 3px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.criteriaSubtitle {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.criteriaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.criteriaCard {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.criteriaCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.criteriaCard:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.criteriaCard:hover::before {
+  animation: shimmer 0.5s ease;
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(45deg) translateY(-100%); }
+  100% { transform: rotate(45deg) translateY(100%); }
+}
+
+.criteriaIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.criteriaCard h3 {
+  color: #764ba2;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.criteriaCard p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.prizeHighlight {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 30px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(240, 147, 251, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.prizeHighlight h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+}
+
+.prizeCategories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.prizeTag {
+  background: white;
+  color: #764ba2;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.prizeTag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(102, 126, 234, 0.3) 0%, transparent 50%);
+  animation: moveGradient 10s ease-in-out infinite;
+}
+
+@keyframes moveGradient {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-20px, -20px); }
+  50% { transform: translate(20px, -10px); }
+  75% { transform: translate(-10px, 20px); }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 7rem;
   }
 }
 
-.buttons {
+.titleGradient {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(240, 147, 251, 0.5);
+}
+
+@keyframes gradientShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(30deg); }
+}
+
+.titlePop {
+  color: white;
+  text-shadow: 
+    3px 3px 0 #f5576c,
+    6px 6px 0 #f093fb,
+    9px 9px 15px rgba(0,0,0,0.3);
+  animation: pop 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+  0% { transform: scale(1) rotate(-1deg); }
+  100% { transform: scale(1.05) rotate(1deg); }
+}
+
+.titleBounce {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: bounce 1s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(118, 75, 162, 0.5);
+}
+
+.heroSubtitle {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.heroButtons {
   display: flex;
-  align-items: center;
+  gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+  color: white;
+  text-decoration: none;
+}
+
+.ctaButtonSecondary {
+  background: transparent;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: 3px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonSecondary:hover {
+  background: white;
+  color: #764ba2;
+  transform: translateY(-3px) scale(1.05);
+  text-decoration: none;
+}
+
+.projectSection {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+}
+
+.projectSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23764ba2' fill-opacity='1' d='M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,56C672,48,768,32,864,26.7C960,21,1056,27,1152,32C1248,37,1344,43,1392,45.3L1440,48L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.sectionSubtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(45deg, #667eea, #764ba2);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+}
+
+.projectCardHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.projectCardHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.projectCardBody {
+  padding: 1.5rem;
+}
+
+.projectCardBody p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.projectCardButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.projectCardButton:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+  color: white;
+  text-decoration: none;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.statNumber {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+}
+
+.statLabel {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.finalCta {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(240, 147, 251, 0.3);
+}
+
+.ctaTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  color: white;
+  margin: 0 0 2rem 0;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bigButton {
+  background: white;
+  color: #f5576c;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.bigButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  color: #f5576c;
+  text-decoration: none;
+}
+
+.bigButtonOutline {
+  background: transparent;
+  color: white;
+  padding: 1rem 3rem;
+  border: 3px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.bigButtonOutline:hover {
+  background: white;
+  color: #f5576c;
+  transform: translateY(-3px) scale(1.05);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+  
+  .criteriaTitle,
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
