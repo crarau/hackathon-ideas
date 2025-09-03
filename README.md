@@ -1,6 +1,6 @@
 # 🚀 Ottawa Hackathon 3.0 Ideas Vault
 
-![Hackathon Ideas Homepage](./static/img/website-preview.jpg)
+![Hackathon Ideas Homepage - Full Page View](./static/img/website-fullpage.jpg)
 
 ## 🔥 What's This All About?
 
