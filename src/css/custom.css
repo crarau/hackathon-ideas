@@ -31,15 +31,27 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Funky navbar styling */
-.navbar {
+/* Funky navbar styling - force gradient on all navbar states */
+.navbar,
+.navbar--fixed-top,
+.navbar--dark,
+.navbar--primary,
+nav[class*="navbar"] {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background-color: #667eea !important; /* Fallback color */
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-/* Remove any white background that might appear */
-.navbar--fixed-top {
+/* Override Docusaurus default white background */
+[data-theme='light'] .navbar,
+[data-theme='dark'] .navbar {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background-color: #667eea !important;
+}
+
+/* Ensure navbar items stay white on gradient background */
+.navbar__inner {
+  background: transparent !important;
 }
 
 .navbar__title {
