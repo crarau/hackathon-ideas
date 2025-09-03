@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, height=630">
+    <title>Social Preview Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400,600,800,900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(240, 147, 251, 0.5) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.5) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(102, 126, 234, 0.5) 0%, transparent 50%);
+        }
+        
+        .content {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+            padding: 60px;
+        }
+        
+        .emoji {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 90px;
+            color: white;
+            text-shadow: 
+                3px 3px 0 #f5576c,
+                6px 6px 0 #f093fb,
+                9px 9px 20px rgba(0,0,0,0.3);
+            line-height: 0.9;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            font-size: 32px;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 24px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 20px;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .badge {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .date {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            background: white;
+            color: #764ba2;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            color: white;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 24px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="date">SEPT 6-7, 2025</div>
+    
+    <div class="content">
+        <div class="emoji">🚀</div>
+        <h1 class="title">
+            OTTAWA HACKATHON 3.0<br>
+            IDEAS VAULT
+        </h1>
+        <p class="subtitle">12+ Battle-Tested Project Ideas to Win Big!</p>
+        <p class="tagline">Build to Convert • Fastest Sales • Most Revenue</p>
+        
+        <div class="badges">
+            <span class="badge">B2B/B2C</span>
+            <span class="badge">VIRAL GTM</span>
+            <span class="badge">QUICK BUILD</span>
+        </div>
+    </div>
+    
+    <div class="logo">hackathon-ideas.ciprianrarau.com</div>
+    
+    <script>
+        // Instructions for capturing:
+        console.log("To capture this as an image:");
+        console.log("1. Open this file in a browser");
+        console.log("2. Open DevTools (F12)");
+        console.log("3. Use Device Toolbar (Ctrl+Shift+M)");
+        console.log("4. Set dimensions to 1200x630");
+        console.log("5. Take a screenshot");
+        console.log("Or use a tool like Puppeteer/Playwright to automate");
+    </script>
+</body>
+</html>
