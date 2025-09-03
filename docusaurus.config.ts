@@ -29,16 +29,70 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
   
   // Open Graph and social card metadata
-  metadata: [
-    {name: 'description', content: '🚀 Ottawa Hackathon 3.0 - September 6-7, 2025 | 12+ Battle-Tested Project Ideas to Win Big! Build to Convert with proven B2B/B2C ideas ready for rapid sales.'},
-    {name: 'og:title', content: '🔥 Ottawa Hackathon 3.0 Ideas - Win Big with Proven Projects!'},
-    {name: 'og:description', content: '12+ Battle-Tested Project Ideas | Sept 6-7, 2025 | Build to Convert | Win prizes for Most Revenue, Fastest Sales, Most Signups & Creative GTM!'},
-    {name: 'og:image', content: 'https://hackathon-ideas.ciprianrarau.com/img/social-preview.jpg'},
-    {name: 'og:type', content: 'website'},
-    {name: 'twitter:card', content: 'summary_large_image'},
-    {name: 'twitter:title', content: '🔥 Ottawa Hackathon 3.0 Ideas'},
-    {name: 'twitter:description', content: '12+ Battle-Tested Project Ideas to dominate the hackathon! Build to Convert 🚀'},
-    {name: 'twitter:image', content: 'https://hackathon-ideas.ciprianrarau.com/img/social-preview.jpg'},
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: '🚀 Ottawa Hackathon 3.0 - September 6-7, 2025 | 12+ Battle-Tested Project Ideas to Win Big! Build to Convert with proven B2B/B2C ideas ready for rapid sales.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:title',
+        content: '🔥 Ottawa Hackathon 3.0 Ideas - Win Big with Proven Projects!',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:description',
+        content: '12+ Battle-Tested Project Ideas | Sept 6-7, 2025 | Build to Convert | Win prizes for Most Revenue, Fastest Sales, Most Signups & Creative GTM!',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image',
+        content: 'https://hackathon-ideas.ciprianrarau.com/img/social-preview.jpg',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'website',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:title',
+        content: '🔥 Ottawa Hackathon 3.0 Ideas',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:description',
+        content: '12+ Battle-Tested Project Ideas to dominate the hackathon! Build to Convert 🚀',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:image',
+        content: 'https://hackathon-ideas.ciprianrarau.com/img/social-preview.jpg',
+      },
+    },
   ],
 
   // Even if you don't use internationalization, you can use this field to set
