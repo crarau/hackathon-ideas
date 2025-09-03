@@ -141,10 +141,6 @@ const config: Config = {
     image: 'img/social-preview.jpg',
     navbar: {
       title: 'Hackathon Ideas',
-      logo: {
-        alt: 'Ottawa Hackathon 3.0',
-        src: 'img/hackathon-logo.png',
-      },
       items: [
         {
           type: 'docSidebar',

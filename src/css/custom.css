@@ -33,8 +33,13 @@
 
 /* Funky navbar styling */
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Remove any white background that might appear */
+.navbar--fixed-top {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
 }
 
 .navbar__title {
@@ -42,6 +47,16 @@
   font-size: 1.8rem;
   letter-spacing: 1px;
   color: white !important;
+}
+
+.navbar__title::before {
+  content: '🚀 ';
+  margin-right: 0.3rem;
+}
+
+/* Hide the default logo if it exists */
+.navbar__logo {
+  display: none;
 }
 
 .navbar__link {
